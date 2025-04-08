@@ -6,15 +6,14 @@ importScripts(
 );
 
 const firebaseConfig = {
-    apiKey: process.env.APIKEY,
-    authDomain: process.env.AUTHDOMAIN,
-    projectId: process.env.PROJECTID,
-    storageBucket: process.env.STORAGEBUCKET,
-    messagingSenderId: process.env.MESSAGINGSENDERID,
-    appId: process.env.APPID,
-    measurementId: process.env.MEASUREMENTID,
+    apiKey: "AIzaSyBJCu9x8eeD4L3H3-nD_F7XphX0g5RSQws",
+    authDomain: "notification-16481.firebaseapp.com",
+    projectId: "notification-16481",
+    storageBucket: "notification-16481.firebasestorage.app",
+    messagingSenderId: "632481603326",
+    appId: "1:632481603326:web:ce70711612191cb11a0faf",
+    measurementId: "G-RDXTM4X48R"
   };
-  
 
 firebase.initializeApp(firebaseConfig);
 
