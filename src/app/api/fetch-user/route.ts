@@ -18,7 +18,7 @@ try {
     
     const users =await User.find({
         _id:{$ne:token._id}
-    }).select("email")
+    }).select("email name")
     
     if (!users || users.length===0){
         return NextResponse.json({

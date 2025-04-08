@@ -7,12 +7,13 @@ export const requestNotificationPermission = async ()=>{
  try {
      const permission = await Notification.requestPermission();
      if(permission==='granted'){
-      
+        const registration = await navigator.serviceWorker.register("/../../public/firebase-messaging-sw");
        if (!messaging) {
            throw new Error("Failed to initialize Firebase Messaging");
        }
        const token = await getToken(messaging, {
            vapidKey: process.env.NEXT_PUBLIC_VAPID_KEY,
+           serviceWorkerRegistration: registration,
        });
    
        const res = await axios.post('/api/firebase-token',{fcmToken:token})

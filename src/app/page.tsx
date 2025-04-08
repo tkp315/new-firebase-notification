@@ -17,7 +17,7 @@ import axios from "axios";
 export default function Home() {
   const { token } = useFCMToken();
   console.log(token);
-  const [users, setUsers] = useState<{ email: string }[]>([]);
+  const [users, setUsers] = useState<{ email: string,name:string }[]>([]);
 
   const [selectedUser, setSelectedUser] = useState<string[]>([]);
 
@@ -71,7 +71,7 @@ export default function Home() {
                   key={idx}
                   className=" flex flex-row justify-between gap-2 border px-1 py-3"
                 >
-                  <div>{user?.email}</div>
+                  <div>{user?.name}</div>
                   <input
                     type="checkbox"
                     onChange={handleChange}
